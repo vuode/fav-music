@@ -1,0 +1,25 @@
+.app {
+  margin: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+.button {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  width: 100%;
+  background: none;
+  border: 1px solid black;
+  border-radius: 1rem;
+  color: currentColor;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
