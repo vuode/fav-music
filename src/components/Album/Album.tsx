@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import cn from 'classnames';
 
 import { Album as AlbumType } from '../../common/types';

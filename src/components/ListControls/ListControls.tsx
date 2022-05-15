@@ -1,4 +1,3 @@
-import React from 'react';
 import cn from 'classnames';
 
 import { ReactComponent as ListIcon } from '../../assets/list.svg';

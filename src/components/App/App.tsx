@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import cn from 'classnames';
 
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
