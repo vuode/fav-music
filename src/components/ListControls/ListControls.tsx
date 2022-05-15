@@ -44,6 +44,7 @@ const ListControls = ({
         <span>Sort by: </span>
         {sortingOptions.map(({ name, type }) => (
           <button
+            key={name}
             type='button'
             className={cn(styles.button, {
               [styles.selected]: sorting === type,
