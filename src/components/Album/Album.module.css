@@ -27,7 +27,6 @@
   gap: 1rem;
   margin-top: 1rem;
   align-self: flex-end;
-  max-width: 21rem;
 }
 
 .action {
@@ -35,13 +34,13 @@
   display: flex;
   align-items: center;
   padding: 0.4rem;
-  width: 10rem;
+  width: 12rem;
   background: none;
   border: 2px solid white;
   border-radius: 1rem;
   color: currentColor;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
   cursor: pointer;
 }
 
