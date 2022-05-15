@@ -1,6 +1,4 @@
 .card {
-  margin: 1rem;
-  /* TEMP */
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -42,6 +40,7 @@
   border: 2px solid white;
   border-radius: 1rem;
   color: currentColor;
+  font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
 }
