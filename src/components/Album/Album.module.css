@@ -1,0 +1,61 @@
+.card {
+  margin: 1rem;
+  /* TEMP */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #2d3142;
+  color: white;
+  border-radius: 1rem;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.date {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.id {
+  color: #c1cad6;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-self: flex-end;
+  max-width: 21rem;
+}
+
+.action {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  width: 10rem;
+  background: none;
+  border: 2px solid white;
+  border-radius: 1rem;
+  color: currentColor;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.icon {
+  padding: 0.2rem;
+}
+
+.liked {
+  color: #d86f6f;
+}
+
+@media screen and (min-width: 500px) {
+  .actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
