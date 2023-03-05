@@ -1,1 +1,1 @@
-export { default } from './ListControls';
+export {default} from './ListControls'

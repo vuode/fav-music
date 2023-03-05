@@ -1,30 +1,30 @@
-import { useMemo, useState } from 'react';
-import cn from 'classnames';
+import {useMemo, useState} from 'react'
+import cn from 'classnames'
 
-import { useAppSelector } from '../../hooks/redux';
-import { useView } from '../../hooks/useView';
-import { sortAlbums } from '../../utils/sortAlbums';
+import {useAppSelector} from '../../hooks/redux'
+import {useView} from '../../hooks/useView'
+import {sortAlbums} from '../../utils/sortAlbums'
 
-import { albumsList } from '../../store/features/albums/albumsSelectors';
+import {albumsList} from '../../store/features/albums/albumsSelectors'
 
-import { SortingType, View } from '../../common/types';
+import {SortingType, View} from '../../common/types'
 
-import Album from '../Album';
-import ListControls from '../ListControls';
+import Album from '../Album'
+import ListControls from '../ListControls'
 
-import styles from './List.module.css';
+import styles from './List.module.css'
 
 const List = () => {
-  const albums = useAppSelector(albumsList);
+  const albums = useAppSelector(albumsList)
 
-  const [sorting, setSorting] = useState(SortingType.Date);
+  const [sorting, setSorting] = useState(SortingType.Date)
 
-  const { view, displayViewToggle, handleViewToggle } = useView();
+  const {view, displayViewToggle, handleViewToggle} = useView()
 
   const sortedAlbums = useMemo(
     () => [...albums].sort(sortAlbums(sorting)),
     [albums, sorting],
-  );
+  )
 
   return (
     <div>
@@ -46,7 +46,7 @@ const List = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default List;
+export default List

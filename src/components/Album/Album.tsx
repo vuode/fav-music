@@ -1,28 +1,25 @@
-import { useMemo } from 'react';
-import cn from 'classnames';
+import {useMemo} from 'react'
+import cn from 'classnames'
 
-import { Album as AlbumType } from '../../common/types';
+import {type Album as AlbumType} from '../../common/types'
 
-import { useAppDispatch } from '../../hooks/redux';
-import {
-  likeAlbum,
-  removeAlbum,
-} from '../../store/features/albums/albumsSlice';
+import {useAppDispatch} from '../../hooks/redux'
+import {likeAlbum, removeAlbum} from '../../store/features/albums/albumsSlice'
 
-import { ReactComponent as Heart } from '../../assets/heart.svg';
-import { ReactComponent as Bin } from '../../assets/bin.svg';
+import {ReactComponent as Heart} from '../../assets/heart.svg'
+import {ReactComponent as Bin} from '../../assets/bin.svg'
 
-import styles from './Album.module.css';
+import styles from './Album.module.css'
 
 type Props = {
-  data: AlbumType;
-};
+  data: AlbumType
+}
 
-const Album = ({ data }: Props) => {
-  const dispatch = useAppDispatch();
+const Album = ({data}: Props) => {
+  const dispatch = useAppDispatch()
 
-  const { id, name, dateAdded, liked } = data;
-  const date = useMemo(() => new Date(dateAdded).toLocaleString(), [dateAdded]);
+  const {id, name, dateAdded, liked} = data
+  const date = useMemo(() => new Date(dateAdded).toLocaleString(), [dateAdded])
 
   return (
     <article className={styles.card}>
@@ -38,7 +35,7 @@ const Album = ({ data }: Props) => {
           Remove
         </button>
         <button
-          className={cn(styles.action, { [styles.liked]: liked })}
+          className={cn(styles.action, {[styles.liked]: liked})}
           onClick={() => dispatch(likeAlbum(id))}
         >
           <Heart className={styles.icon} />
@@ -46,7 +43,7 @@ const Album = ({ data }: Props) => {
         </button>
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default Album;
+export default Album

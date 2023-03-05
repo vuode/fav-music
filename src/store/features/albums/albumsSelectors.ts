@@ -1,3 +1,3 @@
-import { RootState } from '../..';
+import {type RootState} from '../..'
 
-export const albumsList = (state: RootState) => state.albums.list;
+export const albumsList = (state: RootState) => state.albums.list

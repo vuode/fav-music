@@ -1,19 +1,19 @@
-import cn from 'classnames';
+import cn from 'classnames'
 
-import { ReactComponent as ListIcon } from '../../assets/list.svg';
-import { ReactComponent as GridIcon } from '../../assets/grid.svg';
+import {ReactComponent as ListIcon} from '../../assets/list.svg'
+import {ReactComponent as GridIcon} from '../../assets/grid.svg'
 
-import { SortingType, View } from '../../common/types';
+import {SortingType, View} from '../../common/types'
 
-import styles from './ListControls.module.css';
+import styles from './ListControls.module.css'
 
 type Props = {
-  sorting: SortingType;
-  setSorting: (sorting: SortingType) => void;
-  view: View;
-  displayViewToggle: boolean;
-  handleViewToggle: () => void;
-};
+  sorting: SortingType
+  setSorting: (sorting: SortingType) => void
+  view: View
+  displayViewToggle: boolean
+  handleViewToggle: () => void
+}
 
 const sortingOptions = [
   {
@@ -28,7 +28,7 @@ const sortingOptions = [
     name: 'ID',
     type: SortingType.ID,
   },
-];
+]
 
 const ListControls = ({
   sorting,
@@ -41,14 +41,16 @@ const ListControls = ({
     <div className={styles.controls}>
       <div>
         <span>Sort by: </span>
-        {sortingOptions.map(({ name, type }) => (
+        {sortingOptions.map(({name, type}) => (
           <button
             key={name}
-            type='button'
+            type="button"
             className={cn(styles.button, {
               [styles.selected]: sorting === type,
             })}
-            onClick={() => setSorting(type)}
+            onClick={() => {
+              setSorting(type)
+            }}
           >
             {name}
           </button>
@@ -57,14 +59,14 @@ const ListControls = ({
       {displayViewToggle && (
         <button
           className={styles.button}
-          type='button'
+          type="button"
           onClick={handleViewToggle}
         >
           {view === View.List ? <GridIcon /> : <ListIcon />}
         </button>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ListControls;
+export default ListControls

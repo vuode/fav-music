@@ -1,9 +1,9 @@
 export type Album = {
-  id: string;
-  dateAdded: string;
-  name: string;
-  liked: boolean;
-};
+  id: string
+  dateAdded: string
+  name: string
+  liked: boolean
+}
 
 export enum View {
   List = 'list',

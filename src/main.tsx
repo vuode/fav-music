@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
+import React from 'react'
+// eslint-disable-next-line n/file-extension-in-import
+import ReactDOM from 'react-dom/client'
+import {Provider} from 'react-redux'
 
-import { store } from './store';
+import {store} from './store'
 
-import App from './components/App';
+import App from './components/App'
 
-import './index.css';
+import './index.css'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
+const root = ReactDOM.createRoot(document.querySelector('#root')!)
 
 root.render(
   <React.StrictMode>
@@ -18,4 +17,4 @@ root.render(
       <App />
     </Provider>
   </React.StrictMode>,
-);
+)
